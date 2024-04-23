@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4a login_register</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page">
+
+       <div data-role="header" data-theme="b">
+            <h1>jquery mobile </h1>
+       </div> 
+
+       <div data-role="navbar" data-grid="c">
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="login_register.html" class="ui-button-active">Login / Register</a></li>
+        </ul>
+        </div><!-- /navbar -->
+
+        <div class="content">
+        <center>
+            <h3>Register</h3>
+        </center>
+
+        <div data-role="content">
+
+            <label>Full Name:</label>
+            <input type="text" placeholder="Enter your full name"><br>
+
+            <label>Address:</label>
+            <textarea cols="30" rows="7" placeholder="Enter your full Address"></textarea>
+
+            <label>Pincode:</label>
+            <input type="text" placeholder="Enter your Pincode"><br>
+
+            <label>DOB:</label>
+            <input type="date" ><br>
+
+            <label>Email ID:</label>
+            <input type="email" placeholder="Enter your Email"><br>
+
+            <label>Password:</label>
+            <input type="password" placeholder="Enter your password"><br>
+
+            <label>Confirm your Password:</label>
+            <input type="password" placeholder="Re-enter your password"><br>
+
+            <a href="index.html">
+                <input type="submit" value="Register">
+            </a>
+
+            <center>
+                <a href="login.html">Already Registered? Login</a>
+            </center>
+
+        </div>
+        </div>
+
+        <div data-role="footer" data-theme="b" style="text-align: center;">
+            
+            <div id = "quicklinks" >
+            <h3 id = "quicklinks">Quick Links</h3>
+            <ul class = "rows" style="list-style-type: none; margin: 0;padding: 0; display: inline;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="login_register.html">Login / Register</a></li>
+            </ul>
+            </div>
+            <p>@Copyright 2024, Tanmay Limje All rights reserved</p>
+            
+        </div>
+
+    </div>
+</body>
+</html>    
