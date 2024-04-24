@@ -1,0 +1,77 @@
+C:\Users\chint>docker -v
+Docker version 26.0.0, build 2ae903e
+
+C:\Users\chint>docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+C:\Users\chint>docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+C:\Users\chint>docker pull openjdk
+Using default tag: latest
+latest: Pulling from library/openjdk
+197c1adcd755: Pull complete
+57b698b7af4b: Pull complete
+95a27dbe0150: Pull complete
+Digest: sha256:9b448de897d211c9e0ec635a485650aed6e28d4eca1efbc34940560a480b3f1f
+Status: Downloaded newer image for openjdk:latest
+docker.io/library/openjdk:latest
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview openjdk
+
+C:\Users\chint>docker images
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+openjdk      latest    71260f256d19   14 months ago   470MB
+
+C:\Users\chint>docker run --name JAVA -it -d openjdk
+428163800c5ca52fe6ded94560ec83c84bd1cd986e728a08a8dec5dcd970b732
+
+C:\Users\chint>docker ps
+CONTAINER ID   IMAGE     COMMAND    CREATED          STATUS          PORTS     NAMES
+428163800c5c   openjdk   "jshell"   22 seconds ago   Up 21 seconds             JAVA
+
+C:\Users\chint>docker exec -it JAVA jshell
+|  Welcome to JShell -- Version 18.0.2.1
+|  For an introduction type: /help intro
+
+jshell> System.out.println("hello");
+hello
+
+jshell> int a = 10;
+a ==> 10
+
+jshell> int b = 20;
+b ==> 20
+
+jshell> System.out.println("a+b= " + a+b);
+a+b= 1020
+
+jshell> System.out.println("a+b= " + (a+b));
+a+b= 30
+
+jshell> /exit
+|  Goodbye
+
+What's next?
+  Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug JAVA
+  Learn more at https://docs.docker.com/go/debug-cli/
+
+C:\Users\chint>docker ps
+CONTAINER ID   IMAGE     COMMAND    CREATED         STATUS         PORTS     NAMES
+428163800c5c   openjdk   "jshell"   3 minutes ago   Up 3 minutes             JAVA
+
+C:\Users\chint>docker stop 428163800c5c
+428163800c5c
+
+C:\Users\chint>docker container rm 428163800c5c
+428163800c5c
+
+C:\Users\chint>docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+C:\Users\chint>docker images
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+openjdk      latest    71260f256d19   14 months ago   470MB
+
+C:\Users\chint>
